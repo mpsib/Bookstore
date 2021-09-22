@@ -18,13 +18,18 @@
 				<th>Title</th>
 				<th>ISBN</th>
 				<th>Year</th>
+				<th>Category</th>
 			</tr>
 			<tr>
 				<td><input type="text" th:field="*{author}" /></td>
 				<td><input type="text" th:field="*{title}" /></td>
 				<td><input type="text" th:field="*{isbn}" /></td>
 				<td><input type="text" th:field="*{year}" /></td>
-
+				<td>
+					<select th:field="*{category}">
+						<option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}"></option>
+					</select>
+				</td>
 			</tr>
 		</table>
 		
