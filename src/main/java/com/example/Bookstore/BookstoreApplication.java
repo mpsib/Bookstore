@@ -35,8 +35,11 @@ public class BookstoreApplication {
 			categoryRepository.save(cat1);
 			categoryRepository.save(cat2);
 			categoryRepository.save(cat3);
-			bookRepository.save(new Book("rumpukirja", "jussi", 1991, "0-8638-3706-9", 0, cat1));
-			bookRepository.save(new Book("mad ventures", "riku", 1992, "0-7830-3379-6", 0, cat2));	
+			bookRepository.save(new Book("rumpukirja", "Jussi", 1991, "0-8638-3706-9", 0, cat1));
+			bookRepository.save(new Book("mad ventures", "Riku R", 1992, "0-7830-3379-6", 0, cat2));	
+			bookRepository.save(new Book("Sitä sun tätä", "Maija Maijanen", 2005, "0-7520-3879-6", 0, cat2));	
+			bookRepository.save(new Book("Koirat IRL", "Maija Maijanen", 2012, "0-2330-3763-5", 0, cat3));	
+			bookRepository.save(new Book("Front and Back", "Teemu Toiminen", 2014, "0-1947-38769-2", 0, cat3));	
 			
 			log.info("fetch all books");
 			for (Book book : bookRepository.findAll()) {
