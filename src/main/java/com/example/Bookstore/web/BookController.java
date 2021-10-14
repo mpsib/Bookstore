@@ -42,7 +42,7 @@ public class BookController {
 	
 	
 	// TEMPLATE
-	@RequestMapping("/booklist")
+	@RequestMapping({"/booklist", "/"})
 	public String listPage(Model model) {		
 		model.addAttribute("books", bookRepository.findAll());
 		return "booklist";
