@@ -28,6 +28,9 @@ public class BookstoreApplication {
 	public CommandLineRunner studentDemo(BookRepository bookRepository, CategoryRepository categoryRepository, UserRepository userRepository) {
 		return (args) -> {
 			
+			//Usernames are UNIQUE, so you must deleteAll in Heroku. For example urepository.deleteAll() in your CommandLineRunner.
+			userRepository.deleteAll();
+			
 			//loggausjutut otettu Hinkulan esimerkistä
 			log.info("Add example books");
 			
